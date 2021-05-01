@@ -13,7 +13,9 @@
 body{
     background-color: gray;
 }
-/* section title */
+
+/* SECTION 1 */
+/* section of the title */
 #title{
     background-color: yellow;
     border: solid white 5px;
@@ -26,6 +28,7 @@ body{
     text-align: center;
 }
 
+/* SECTION 2 */
 /* section info */
 #info{
     display: grid;
@@ -36,35 +39,35 @@ body{
     border-radius: 0px 0px 5px 5px;
 }
 
-/* red divs on grid */
 .infoCard{
     background-color: red;
     border: solid black;
 }
 
-/* title of first red on grid */
-div#yourCards p{
-    text-align: center;
-}
-
+/* First On Grid */
 #yourCards{
     border-bottom-right-radius: 10px;
 }
 
-/* image and caracteristics are here */
+/* title */
+div#yourCards p{
+    text-align: center;
+}
+
+
+/* image and caracteristics */
 .imageCaracteristics{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-/* your choice image */
+/* your image */
 div#yourCards img{
     height: 80px;
 }
 
-
-/* p of div caracteristic */
+/* div caracteristic */
 div#caracteristics p{
     text-align: left;
 }
