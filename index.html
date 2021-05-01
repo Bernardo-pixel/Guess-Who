@@ -8,21 +8,44 @@
     <title>Guess Who</title>
 </head>
 <body>
+    <!-- section 1 -->
     <section id="title">
         <h1 id="h1">GUESS WHO?</h1>
     </section>
+    <!-- section 2 -->
     <section id="info">
         <div id="yourCards" class="infoCard">
-            <img src="" id="yourCard">
-            <div>Caracteristics</div>
+            <p>Your Cards</p>
+            <div class="imageCaracteristics">
+                <img src="https://i.pinimg.com/736x/b1/0b/f3/b10bf36c6d6f4cc32819803c801bbec8.jpg" id="yourCard" class="imageCaracteristics">
+                <div id="caracteristics">
+                    <p>Caracteristics:</p>
+                    <p>test</p>
+                </div>
+            </div>
         </div>
         <div id="vs">
-            <p id="yourNickname" class="nick"></p>
-            <p id="enemyNickname" class="nick"></p>
+            <div id="centralInfo">
+                <p id="nicknames">
+                    <spam id="yourNickname" class="nick">Your Nickname</spam>
+                    <spam> VS </spam>
+                    <spam id="enemyNickname" class="nick">Enemy Nickname</spam>
+                </p>
+                <p id="points">
+                    <spam id="yourPoints" class="points">Your Points: 1</spam>
+                    <spam id="enemyPoints" class="points">Enemy Points: 0</spam>
+                </p>
+            </div>
         </div>
         <div id="enemyCards" class="infoCard">
-            <img src="" id="enemyCard">
-            <div>Caracteristics</div>
+            <p>Enemy Cards</p>
+            <div class="imageCaracteristics">
+                <img src="https://i.pinimg.com/736x/b1/0b/f3/b10bf36c6d6f4cc32819803c801bbec8.jpg" id="enemyCard" class="imageCaracteristics">
+                <div id="enemyCaracteristics">
+                    <p>Caracteristics:</p>
+                    <p>test</p>
+                </div>
+            </div>
         </div>
     </section>
     <script src="script.js"></script>

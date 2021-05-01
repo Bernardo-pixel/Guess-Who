@@ -1,6 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    font-size: 1.4rem;
+    --red:red;
+    --blue:blue;
+    --redShadow: rgba(255, 0, 0, 0.5);
+}
+
 body{
     background-color: gray;
-    margin: 0px;
 }
 /* section title */
 #title{
@@ -9,8 +20,8 @@ body{
 }
 
 #h1{
-    text-shadow: rgba(255, 0, 0, 0.5) 0px 0px 10px;
-    color: red;
+    text-shadow: var(--redShadow) 0px 0px 10px;
+    color: var(--red);
     font-size: 30px;
     text-align: center;
 }
@@ -19,13 +30,78 @@ body{
 #info{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: minmax(350, 100);
     gap: 0px;
     border: solid white 5px;
     border-top: none;
     border-radius: 0px 0px 5px 5px;
 }
 
+/* red divs on grid */
 .infoCard{
     background-color: red;
+    border: solid black;
+}
+
+/* title of first red on grid */
+div#yourCards p{
+    text-align: center;
+}
+
+#yourCards{
+    border-bottom-right-radius: 10px;
+}
+
+/* image and caracteristics are here */
+.imageCaracteristics{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* your choice image */
+div#yourCards img{
+    height: 80px;
+}
+
+
+/* p of div caracteristic */
+div#caracteristics p{
+    text-align: left;
+}
+
+/* central div on info section */
+#centralInfo{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: minmax(50px, auto);
+    gap: 0px;
+    text-align: center;
+}
+
+#nicknames{
+    background-color: white;
+    border: solid black;
+    border-left: none;
+    border-right: none;
+}
+
+#nicknames, #points{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* second red div on info section */
+#enemyCards{
+    border-bottom-left-radius: 10px;
+}
+
+/* title of second red on grid */
+div#enemyCards p{
+    text-align: center;
+}
+
+/* your choice image */
+div#enemyCards img{
+    height: 80px;
 }
