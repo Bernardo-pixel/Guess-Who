@@ -1,0 +1,31 @@
+body{
+    background-color: gray;
+    margin: 0px;
+}
+/* section title */
+#title{
+    background-color: yellow;
+    border: solid white 5px;
+}
+
+#h1{
+    text-shadow: rgba(255, 0, 0, 0.5) 0px 0px 10px;
+    color: red;
+    font-size: 30px;
+    text-align: center;
+}
+
+/* section info */
+#info{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(350, 100);
+    gap: 0px;
+    border: solid white 5px;
+    border-top: none;
+    border-radius: 0px 0px 5px 5px;
+}
+
+.infoCard{
+    background-color: red;
+}
