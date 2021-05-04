@@ -16,12 +16,12 @@ body{
 
 /* SECTION 1 */
 /* section of the title */
-#title{
+#secao1{
     background-color: yellow;
     border: solid white 5px;
 }
 
-#h1{
+#titulo{
     text-shadow: var(--redShadow) 0px 0px 10px;
     color: var(--red);
     font-size: 30px;
@@ -30,7 +30,7 @@ body{
 
 /* SECTION 2 */
 /* section info */
-#info{
+#secao2{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 0px;
@@ -39,14 +39,11 @@ body{
     border-radius: 0px 0px 5px 5px;
 }
 
-.infoCard{
-    background-color: red;
-    border: solid black;
-}
-
 /* First On Grid */
 #yourCards{
     border-bottom-right-radius: 10px;
+    background-color: red;
+    border: solid black;
 }
 
 /* title */
@@ -68,11 +65,11 @@ div#yourCards img{
 }
 
 /* div caracteristic */
-div#caracteristics p{
+div#imagem p{
     text-align: left;
 }
 
-/* central div on info section */
+/* second div on info section */
 #centralInfo{
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -94,17 +91,56 @@ div#caracteristics p{
     align-items: center;
 }
 
-/* second red div on info section */
+/* Third div on second section */
 #enemyCards{
     border-bottom-left-radius: 10px;
+    background-color: red;
+    border: solid black;
 }
 
-/* title of second red on grid */
+/* title */
 div#enemyCards p{
     text-align: center;
 }
 
-/* your choice image */
+/* enemy image */
 div#enemyCards img{
     height: 80px;
+}
+
+/* SECTION 3 */
+#section3{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0px;
+    border: solid white 5px;
+    border-top: none;
+    border-radius: 0px 0px 5px 5px;
+}
+
+#section3 div{
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+}
+
+#section3 div button{
+    width: 80%;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid;
+    transition: 0.5s;
+}
+
+#section3 div button:hover{
+    color: white;
+    background-color: black;
+}
+
+#time{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    color: greenyellow;
+    text-shadow: 1px 1px 1px black;
+    text-transform: uppercase;
 }
