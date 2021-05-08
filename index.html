@@ -8,22 +8,24 @@
     <title>Guess Who</title>
 </head>
 <body>
-    <!-- section 1 -->
-    <section id="title">
-        <h1 id="h1">GUESS WHO?</h1>
+    <!-- SECTION 1 -->
+    <section id="secao1">
+        <h1 id="titulo">GUESS WHO?</h1>
     </section>
-    <!-- section 2 -->
-    <section id="info">
-        <div id="yourCards" class="infoCard">
+    <!-- SECTION 2 -->
+    <section id="secao2">
+        <!-- div1 -->
+        <div id="yourCards">
             <p>Your Cards</p>
             <div class="imageCaracteristics">
                 <img src="https://i.pinimg.com/736x/b1/0b/f3/b10bf36c6d6f4cc32819803c801bbec8.jpg" id="yourCard" class="imageCaracteristics">
-                <div id="caracteristics">
+                <div id="yourCaracteristics">
                     <p>Caracteristics:</p>
                     <p>test</p>
                 </div>
             </div>
         </div>
+        <!-- div2 -->
         <div id="vs">
             <div id="centralInfo">
                 <p id="nicknames">
@@ -37,6 +39,7 @@
                 </p>
             </div>
         </div>
+        <!-- div3 -->
         <div id="enemyCards" class="infoCard">
             <p>Enemy Cards</p>
             <div class="imageCaracteristics">
@@ -47,6 +50,35 @@
                 </div>
             </div>
         </div>
+    </section>
+    <section id="section3">
+        <div>
+            <button id="yes" onclick="yes()">YES</button>
+        </div>
+        <div>
+            <button id="dontKnow" onclick="dontKnow()">I Dont Know</button>
+        </div>
+        <div>
+            <button id="no" onclick="no()">NO</button>
+        </div>
+        <div id="time">
+            <p>Time: 15</p>
+        </div>
+    </section>
+    <section id="section4">
+        <div class="dropdown">
+            <button onclick="search()" class="dropbtn">Dropdown</button>
+            <div id="myDropdown" class="dropdown-content">
+              <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+              <p>About</p>
+              <p>Base</p>
+              <p>Blog</p>
+              <p>Contact</p>
+              <p>Custom</p>
+              <p>Support</p>
+              <p>Tools</p>
+            </div>
+          </div>
     </section>
     <script src="script.js"></script>
 </body>
