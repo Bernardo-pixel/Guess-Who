@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -8,6 +10,7 @@
     --red:red;
     --blue:blue;
     --redShadow: rgba(255, 0, 0, 0.5);
+    font-family: 'Source Sans Pro', sans-serif;;
 }
 
 body{
@@ -15,13 +18,13 @@ body{
 }
 
 /* SECTION 1 */
-/* section of the title */
-#secao1{
+/* section of the title h1 */
+#section1{
     background-color: yellow;
     border: solid white 5px;
 }
 
-#titulo{
+h1{
     text-shadow: var(--redShadow) 0px 0px 10px;
     color: var(--red);
     font-size: 30px;
@@ -29,8 +32,8 @@ body{
 }
 
 /* SECTION 2 */
-/* section info */
-#secao2{
+/* section info cards */
+#section2{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 0px;
@@ -40,14 +43,14 @@ body{
 }
 
 /* First On Grid */
-#yourCards{
+#myCards{
     border-bottom-right-radius: 10px;
     background-color: red;
     border: solid black;
 }
 
 /* title */
-div#yourCards p{
+div#myCards p{
     text-align: center;
 }
 
@@ -60,7 +63,7 @@ div#yourCards p{
 }
 
 /* your image */
-div#yourCards img{
+div#myCards img{
     height: 80px;
 }
 
@@ -144,3 +147,5 @@ div#enemyCards img{
     text-shadow: 1px 1px 1px black;
     text-transform: uppercase;
 }
+
+/* section grid to divide section form and panel game */

@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --gray: #E9EAEC;
+    --mediumGray: rgb(143, 140, 140);
+    --darkGray: rgb(41, 40, 40);
+    --darkBlue: #333652;
+    --yellow: #FAD02C;
+    --blueGray: #90ADC6;
+    --transparent: rgba(255, 255, 255, 0.5);
+    --lightGreen: lightgreen;
+    font-family: 'Source Sans Pro', sans-serif;;
+    font-size: 1.2rem;
+    font-variant: small-caps;
+}
+
+body{
+    background-color: var(--mediumGray);
+}
+header h1 {
+    text-align: center;
+    color: var(--yellow);
+}
+
+/* início painel inicial */
+#painelInicial {
+    background-color: var(--darkGray);
+    color: var(--gray);
+}
+
+
+#painelInicial p{
+    text-align: center;
+}
+
+
+#painelInicial input {
+    /* margin auto e display table para o input ficar centralizado */
+    margin: 2% auto 1% auto;
+    display:table;
+    font-family: 'Source Sans Pro', sans-serif;;
+    font-size: 1.2rem;
+    font-variant: small-caps;
+}
+
+
+/* fim painel inicial */
+/* inicio seção perguntas */
+#secaoPerguntas {
+    background-color: var(--transparent);
+    border-radius: 10px;
+    padding: 0;
+}
+#secaoPerguntas p{
+    background-color: var(--lightGreen);
+    padding: 1% 0 1% 0;
+    border-radius: 5px;
+    /* border: 1px solid; */
+}
+#secaoPerguntas p:nth-child(odd){
+    background-color: var(--yellow);
+    
+    border: 1px ridge;
+}
+/* fim seção perguntas */
+
+/* inicio painel com as 24 cartas */
+.divPainelCartas {
+    max-height: 130px;
+}
+
+.divPainelCartas p{
+    background-color: var(--transparent);
+    display: flex;
+    justify-content: center;
+    font-size: .8rem;
+    width: max-content;
+    border-radius: 5px;
+    padding:3px;
+    margin: 10% auto 2% auto;
+}
+
+.divPainelCartas img {
+    background-color: var(--transparent);
+    width: 120px;
+    height: 90px;
+    /* position relative para posicionar a persiana sobre a carta */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+.divPainelCartas img:nth-child(3){
+    display: none;
+    position: relative;
+    /* precisa ter o mesmo valor da altura da carta */
+    bottom: 90px;
+}
+
+/* fim painel com 24 cartas */

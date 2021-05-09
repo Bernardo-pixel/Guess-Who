@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta author="Bernardo, Emiliano, Hercules, Luciane">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- bootstrap -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+            integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="styleGame.css">
+        <title>Guess Who</title>
+    </head>
+
+    <body>
+        <header class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h1>Adivinhe a carta</h1>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <!-- placar e cartas escolhidas -->
+            <div id="painelInicial" class="container-fluid">
+                <div class="row">
+                    <div class="col">
+                        <p>minhas cartas</p>
+
+                    </div>
+                    <div class="col">
+                        <input type="button" onclick="carregarTema()" value="Jogar" class="btn btn-success" />
+                        <p>
+                            <span id="jogador">meus pontos</span> &cross; <span id="adversarios">pontos do
+                                adversário</span>
+                        </p>
+                    </div>
+                    <div class="col">
+                        <p>adversário</p>
+
+                    </div>
+                </div>
+            </div>
+            <!-- fim placar e cartas escolhidas -->
+            <!-- inicio formulario de questões e tabuleiro -->
+            <div class="container">
+                <div class="row">
+                    <!-- para dividir o conteudo, foi determinado percentual nas colunas-mãe -->
+                    <!-- coluna mãe 1 -->
+                    <div id="secaoPerguntas" style="max-width: 15%;" class="col-sm-12">
+                        <p class="pergunta" id="pergunta1">É doce?</p>
+                        <p class="pergunta" id="pergunta1">É salgado?</p>
+                        <p class="pergunta" id="pergunta1">É bebida?</p>
+                        <p class="pergunta" id="pergunta1">É redondo?</p>
+                        <p class="pergunta" id="pergunta1">É amarelo?</p>
+
+                    </div>
+                    <!-- coluna mãe 2 -->
+                    <div style="max-width: 80%;" class="col-sm-12 container-fluid">
+                        <!-- <div class="container-fluid"> -->
+                        <!-- primeira linha com 6 colunas -->
+                        <div class="row">
+                            <div id="fig1" class="col-sm-2 divPainelCartas">
+                                <!-- nesse parágrafo virá a descrição -->
+                                <p></p>
+                                <img src="images/interrogacao.jpg" />
+                                <img src="images/persianaAmarela.jpg" alt="">
+                            </div>
+                            <div id="fig2" class="col-sm-2 divPainelCartas">
+                                <!-- nesse parágrafo virá a descrição -->
+                                <p></p>
+                                <img src="images/interrogacao.jpg" />
+                                <img src="images/persianaAmarela.jpg" alt="">
+                            </div>
+                            <div id="fig3" class="col-sm-2 divPainelCartas">
+                                <!-- nesse parágrafo virá a descrição -->
+                                <p></p>
+                                <img src="images/interrogacao.jpg" />
+                                <img src="images/persianaAmarela.jpg" alt="">
+                            </div>
+                            <div id="fig4" class="col-sm-2 divPainelCartas">
+                                <!-- nesse parágrafo virá a descrição -->
+                                <p></p>
+                                <img src="images/interrogacao.jpg" />
+                                <img src="images/persianaAmarela.jpg" alt="">
+                            </div>
+                            <div id="fig5" class="col-sm-2 divPainelCartas">
+                                <!-- nesse parágrafo virá a descrição -->
+                                <p></p>
+                                <img src="images/interrogacao.jpg" />
+                                <img src="images/persianaAmarela.jpg" alt="">
+                            </div>
+                            <div id="fig6" class="col-sm-2 divPainelCartas">
+                                <!-- nesse parágrafo virá a descrição -->
+                                <p></p>
+                                <img src="images/interrogacao.jpg" />
+                                <img src="images/persianaAmarela.jpg" alt="">
+                            </div>
+                        </div>
+                        <!-- fim primeira linha com 6 colunas -->
+                        <!-- segunda linha com 6 colunas -->
+                        <div class="row">
+                            <div id="fig7" class="col-sm-2 divPainelCartas">
+                                <!-- nesse parágrafo virá a descrição -->
+                                <p></p>
+                                <img src="images/interrogacao.jpg" />
+                                <img src="images/persianaAmarela.jpg" alt="">
+                            </div>
+                            <div id="fig8" class="col-sm-2 divPainelCartas">
+                                <!-- nesse parágrafo virá a descrição -->
+                                <p></p>
+                                <img src="images/interrogacao.jpg" />
+                                <img src="images/persianaAmarela.jpg" alt="">
+                            </div>
+                            <div id="fig9" class="col-sm-2 divPainelCartas">
+                                <!-- nesse parágrafo virá a descrição -->
+                                <p></p>
+                                <img src="images/interrogacao.jpg" />
+                                <img src="images/persianaAmarela.jpg" alt="">
+                            </div>
+                            <div id="fig10" class="col-sm-2 divPainelCartas">
+                                <!-- nesse parágrafo virá a descrição -->
+                                <p></p>
+                                <img src="images/interrogacao.jpg" />
+                                <img src="images/persianaAmarela.jpg" alt="">
+                            </div>
+                            <div id="fig11" class="col-sm-2 divPainelCartas">
+                                <!-- nesse parágrafo virá a descrição -->
+                                <p></p>
+                                <img src="images/interrogacao.jpg" />
+                                <img src="images/persianaAmarela.jpg" alt="">
+                            </div>
+                            <div id="fig12" class="col-sm-2 divPainelCartas">
+                                <!-- nesse parágrafo virá a descrição -->
+                                <p></p>
+                                <img src="images/interrogacao.jpg" />
+                                <img src="images/persianaAmarela.jpg" alt="">
+                            </div>
+                        </div>
+                        <!-- fim segunda linha com 6 colunas -->
+                        <!-- terceira linha com 6 colunas -->
+                        <div class="row">
+                            <div id="fig13" class="col-sm-2 divPainelCartas">
+                                <!-- nesse parágrafo virá a descrição -->
+                                <p></p>
+                                <img src="images/interrogacao.jpg" />
+                                <img src="images/persianaAmarela.jpg" alt="">
+                            </div>
+                            <div id="fig14" class="col-sm-2 divPainelCartas">
+                                <!-- nesse parágrafo virá a descrição -->
+                                <p></p>
+                                <img src="images/interrogacao.jpg" />
+                                <img src="images/persianaAmarela.jpg" alt="">
+                            </div>
+                            <div id="fig15" class="col-sm-2 divPainelCartas">
+                                <!-- nesse parágrafo virá a descrição -->
+                                <p></p>
+                                <img src="images/interrogacao.jpg" />
+                                <img src="images/persianaAmarela.jpg" alt="">
+                            </div>
+                            <div id="fig16" class="col-sm-2 divPainelCartas">
+                                <!-- nesse parágrafo virá a descrição -->
+                                <p></p>
+                                <img src="images/interrogacao.jpg" />
+                                <img src="images/persianaAmarela.jpg" alt="">
+                            </div>
+                            <div id="fig17" class="col-sm-2 divPainelCartas">
+                                <!-- nesse parágrafo virá a descrição -->
+                                <p></p>
+                                <img src="images/interrogacao.jpg" />
+                                <img src="images/persianaAmarela.jpg" alt="">
+                            </div>
+                            <div id="fig18" class="col-sm-2 divPainelCartas">
+                                <!-- nesse parágrafo virá a descrição -->
+                                <p></p>
+                                <img src="images/interrogacao.jpg" />
+                                <img src="images/persianaAmarela.jpg" alt="">
+                            </div>
+                        </div>
+                        <!-- fim terceira linha com 6 colunas -->
+                        <!-- quarta linha com 6 colunas -->
+                        <div class="row">
+                            <div id="fig19" class="col-sm-2 divPainelCartas">
+                                <!-- nesse parágrafo virá a descrição -->
+                                <p></p>
+                                <img src="images/interrogacao.jpg" />
+                                <img src="images/persianaAmarela.jpg" alt="">
+                            </div>
+                            <div id="fig20" class="col-sm-2 divPainelCartas">
+                                <!-- nesse parágrafo virá a descrição -->
+                                <p></p>
+                                <img src="images/interrogacao.jpg" />
+                                <img src="images/persianaAmarela.jpg" alt="">
+                            </div>
+                            <div id="fig21" class="col-sm-2 divPainelCartas">
+                                <!-- nesse parágrafo virá a descrição -->
+                                <p></p>
+                                <img src="images/interrogacao.jpg" />
+                                <img src="images/persianaAmarela.jpg" alt="">
+                            </div>
+                            <div id="fig22" class="col-sm-2 divPainelCartas">
+                                <!-- nesse parágrafo virá a descrição -->
+                                <p></p>
+                                <img src="images/interrogacao.jpg" />
+                                <img src="images/persianaAmarela.jpg" alt="">
+                            </div>
+                            <div id="fig23" class="col-sm-2 divPainelCartas">
+                                <!-- nesse parágrafo virá a descrição -->
+                                <p></p>
+                                <img src="images/interrogacao.jpg" />
+                                <img src="images/persianaAmarela.jpg" alt="">
+                            </div>
+                            <div id="fig24" class="col-sm-2 divPainelCartas">
+                                <!-- nesse parágrafo virá a descrição -->
+                                <p></p>
+                                <img src="images/interrogacao.jpg" />
+                                <img src="images/persianaAmarela.jpg" alt="">
+                            </div>
+                        </div>
+                        <!-- fim quarta linha com 6 colunas -->
+                    </div>
+                </div>
+                <!-- fechamento da linha que abrange os dois conteúdos -->
+            </div>
+            <!-- fim formulario de questões e tabuleiro -->
+        </main>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="script.js"></script>
+        <!-- BOOTSTRAP JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+        </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+        </script>
+    </body>
+
+</html>

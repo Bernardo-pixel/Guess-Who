@@ -1,85 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Guess Who</title>
-</head>
-<body>
-    <!-- SECTION 1 -->
-    <section id="secao1">
-        <h1 id="titulo">GUESS WHO?</h1>
-    </section>
-    <!-- SECTION 2 -->
-    <section id="secao2">
-        <!-- div1 -->
-        <div id="yourCards">
-            <p>Your Cards</p>
-            <div class="imageCaracteristics">
-                <img src="https://i.pinimg.com/736x/b1/0b/f3/b10bf36c6d6f4cc32819803c801bbec8.jpg" id="yourCard" class="imageCaracteristics">
-                <div id="yourCaracteristics">
-                    <p>Caracteristics:</p>
-                    <p>test</p>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta author="Bernardo, Emiliano, Hercules, Luciane">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- bootstrap -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+            integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+        <title>Guess Who</title>
+    </head>
+
+    <body>
+        <!-- SECTION 1 -->
+        <section id="section1">
+            <h1>GUESS WHO?</h1>
+        </section>
+        <main>
+
+            <!-- SECTION 2 -->
+            <!-- panel info card -->
+            <section id="section2">
+                <!-- div1 -->
+                <div id="myCards">
+                    <p>Carta escolhida</p>
+                    <div class="imageCaracteristics">
+                        <div>
+                            <img src="https://i.pinimg.com/736x/b1/0b/f3/b10bf36c6d6f4cc32819803c801bbec8.jpg"
+                                id="yourCard" class="imageCaracteristics">
+                        </div>
+                        <div id="yourCaracteristics">
+                            <p>Caracteristicas:</p>
+                            <p>test</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- div2 -->
+                <div id="vs">
+                    <div id="centralInfo">
+                        <p id="nicknames">
+                            <spam id="yourNickname" class="nick">Your Nickname</spam>
+                            <spam> VS </spam>
+                            <spam id="enemyNickname" class="nick">Enemy Nickname</spam>
+                        </p>
+                        <p id="points">
+                            <spam id="yourPoints" class="points">Your Points: 1</spam>
+                            <spam id="enemyPoints" class="points">Enemy Points: 0</spam>
+                        </p>
+                    </div>
+                </div>
+                <!-- div3 -->
+                <div id="enemyCards" class="infoCard">
+                    <p>Enemy Cards</p>
+                    <div class="imageCaracteristics">
+                        <img src="https://i.pinimg.com/736x/b1/0b/f3/b10bf36c6d6f4cc32819803c801bbec8.jpg"
+                            id="enemyCard" class="imageCaracteristics">
+                        <div id="enemyCaracteristics">
+                            <p>Caracteristics:</p>
+                            <p>test</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="section3">
+                <div>
+                    <button id="yes" onclick="yes()">YES</button>
+                </div>
+                <div>
+                    <button id="dontKnow" onclick="dontKnow()">I Dont Know</button>
+                </div>
+                <div>
+                    <button id="no" onclick="no()">NO</button>
+                </div>
+                <div id="time">
+                    <p>Time: 15</p>
+                </div>
+            </section>
+
+
+            <!-- questions -->
+            <!-- grid com perguntas a 20% e jogo 80% -->
+            <div class="container">
+                <div class="col"></div>
+
+                <div id="panelForm">formulário de perguntas
+                    <form action="">
+                        <select name="" id="">
+
+                        </select>
+                    </form>
+                </div>
+
+                <!-- show all cards -->
+                <div class="container" id="panelGame">
+
+                    <div class="row">
+                        <!-- figuras sobrepostas -->
+                        <!-- coluna1 -->
+                        <div id="fig1" class="col">
+                            <div class="img-figura">
+                                <img src="img/paisagem.jpg" alt="">
+                            </div>
+                            <div class="img-persiana">
+                                <img src="img/persianaAmarela.jpg" alt="">
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
-        </div>
-        <!-- div2 -->
-        <div id="vs">
-            <div id="centralInfo">
-                <p id="nicknames">
-                    <spam id="yourNickname" class="nick">Your Nickname</spam>
-                    <spam> VS </spam>
-                    <spam id="enemyNickname" class="nick">Enemy Nickname</spam>
-                </p>
-                <p id="points">
-                    <spam id="yourPoints" class="points">Your Points: 1</spam>
-                    <spam id="enemyPoints" class="points">Enemy Points: 0</spam>
-                </p>
-            </div>
-        </div>
-        <!-- div3 -->
-        <div id="enemyCards" class="infoCard">
-            <p>Enemy Cards</p>
-            <div class="imageCaracteristics">
-                <img src="https://i.pinimg.com/736x/b1/0b/f3/b10bf36c6d6f4cc32819803c801bbec8.jpg" id="enemyCard" class="imageCaracteristics">
-                <div id="enemyCaracteristics">
-                    <p>Caracteristics:</p>
-                    <p>test</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="section3">
-        <div>
-            <button id="yes" onclick="yes()">YES</button>
-        </div>
-        <div>
-            <button id="dontKnow" onclick="dontKnow()">I Dont Know</button>
-        </div>
-        <div>
-            <button id="no" onclick="no()">NO</button>
-        </div>
-        <div id="time">
-            <p>Time: 15</p>
-        </div>
-    </section>
-    <section id="section4">
-        <div class="dropdown">
-            <button onclick="search()" class="dropbtn">Dropdown</button>
-            <div id="myDropdown" class="dropdown-content">
-              <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
-              <p>About</p>
-              <p>Base</p>
-              <p>Blog</p>
-              <p>Contact</p>
-              <p>Custom</p>
-              <p>Support</p>
-              <p>Tools</p>
-            </div>
-          </div>
-    </section>
-    <script src="script.js"></script>
-</body>
+        </main>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="script.js"></script>
+        <!-- BOOTSTRAP JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+        </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+        </script>
+    </body>
+
 </html>
